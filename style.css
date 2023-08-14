@@ -1,12 +1,12 @@
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
-/* 在 CSS 中，:root 选择器表示文档的根元素 <html>，用于设置全局的 CSS 变量。
-在 JavaScript 中，:root 并不是一个特殊的关键字或选择器，而是可以使用 
-document.documentElement 来表示文档的根元素，用于获取并操作根元素的属性和样式。
+/* In CSS, the :root selector represents the root element <html> of the document and is used to set global CSS variables.
+In JavaScript, :root is not a special keyword or selector, but you can use
+document.documentElement to represent the root element of the document, used to obtain and manipulate the properties and styles of the root element.
 
 document.documentElement.style.setProperty('--color-primary', 'orangered');
-通过调用 .setProperty() 方法，可以直接在 JavaScript 中修改元素的 CSS 样式。这在动态改变页面样式、响应用户交互等方面非常有用。
-请注意，这个方法是针对元素的内联样式（inline style）进行修改，因此会直接将样式应用于元素本身。如果存在样式优先级的冲突，内联样式会具有更高的优先级。
+An element's CSS styles can be modified directly in JavaScript by calling the .setProperty() method. This is useful for dynamically changing page styles, responding to user interaction, etc.
+Note that this method modifies the inline style of the element, so it applies the style directly to the element itself. If there is a style precedence conflict, the inline style will take precedence.
 */
 
 :root {
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: #444;
   line-height: 1.9;
@@ -225,7 +225,7 @@ h4 {
 
 .highlight::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -479,7 +479,7 @@ h4 {
 }
 
 .testimonial::before {
-  content: '\201C';
+  content: "\201C";
   position: absolute;
   top: -5.7rem;
   left: -6.8rem;
