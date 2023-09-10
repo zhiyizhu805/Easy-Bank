@@ -1,6 +1,6 @@
-'use strict';
-console.log('=======  Build slider component  =======');
-console.log('-------  my first version  -------');
+"use strict";
+console.log("=======  Build slider component  =======");
+console.log("-------  my first version  -------");
 // const slides = document.querySelectorAll('.slide');
 // const slider = document.querySelector('.slider');
 // const btnSlideRight = document.querySelector('.slider__btn--right');
@@ -84,7 +84,7 @@ console.log('-------  my first version  -------');
 // //add eventlistener to keyborad event
 // document.addEventListener('keydown', directToSlideKeyPress);
 
-console.log('-------  revised my version  -------');
+console.log("-------  revised my version  -------");
 //improvement:
 //1.  use .insertAdjacentHTML('beforeend'),`HTML...`) to create button element
 //     instead of manually add all attributes one by one
@@ -104,11 +104,11 @@ console.log('-------  revised my version  -------');
 //slide.style.transform = `translateY(${index * -100}%)`
 const slider = function () {
   //***element
-  const slides = document.querySelectorAll('.slide');
-  const dotsContainer = document.querySelector('.dots');
-  const btnNext = document.querySelector('.slider__btn--right');
-  const btnPrev = document.querySelector('.slider__btn--left');
-  const maxSlide = document.querySelectorAll('.slide').length;
+  const slides = document.querySelectorAll(".slide");
+  const dotsContainer = document.querySelector(".dots");
+  const btnNext = document.querySelector(".slider__btn--right");
+  const btnPrev = document.querySelector(".slider__btn--left");
+  const maxSlide = document.querySelectorAll(".slide").length;
 
   //spread the overlap
   slides.forEach((slide, index) => {
@@ -130,7 +130,7 @@ const slider = function () {
   const createDots = function () {
     slides.forEach((_, index) => {
       dotsContainer.insertAdjacentHTML(
-        'beforeend',
+        "beforeend",
         `<button class="dots__dot" data-slide=${index}></button>`
       );
     });
@@ -140,11 +140,11 @@ const slider = function () {
   const activateDot = function (currentSlide) {
     console.log(currentSlide);
     document
-      .querySelectorAll('.dots__dot')
-      .forEach(dot => dot.classList.remove('dots__dot--active'));
+      .querySelectorAll(".dots__dot")
+      .forEach((dot) => dot.classList.remove("dots__dot--active"));
     document
       .querySelector(`.dots__dot[data-slide="${currentSlide}"]`)
-      .classList.add('dots__dot--active');
+      .classList.add("dots__dot--active");
   };
 
   //***call-back
@@ -163,7 +163,7 @@ const slider = function () {
 
   //*** event listener
   const dotClick = function () {
-    dotsContainer.addEventListener('click', e => {
+    dotsContainer.addEventListener("click", (e) => {
       //remember do guard clause when use bubble
       if (!e.target) return;
       // console.log(e.target.dataset);
@@ -181,14 +181,14 @@ const slider = function () {
   };
   init();
 
-  document.addEventListener('keydown', function (e) {
+  document.addEventListener("keydown", function (e) {
     e.preventDefault();
-    e.key === 'ArrowRight' && next(currentSlide);
-    e.key === 'ArrowLeft' && prev(currentSlide);
+    e.key === "ArrowRight" && next(currentSlide);
+    e.key === "ArrowLeft" && prev(currentSlide);
   });
 
   //convert css to -100%,0%,100%,200%,
-  btnNext.addEventListener('click', next);
-  btnPrev.addEventListener('click', prev);
+  btnNext.addEventListener("click", next);
+  btnPrev.addEventListener("click", prev);
 };
 slider();
