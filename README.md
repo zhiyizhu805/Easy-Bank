@@ -1,3 +1,6 @@
+## 💻 Demo
+https://easy-bank-js.netlify.app/
+
 ## 🏦 Easy Bank
 Easy Bank is a simulation project that replicates a modern banking interface. It is implemented using HTML, CSS, and JavaScript and provides functionalities such as modal windows and page scrolling.This project is bulit while learning JavaScript with Jonas's tutorials.
 
